@@ -16,7 +16,7 @@ interface ISlide{
   styleUrls: ['./presentation.component.scss']
 })
 export class PresentationComponent implements OnInit {
-
+  page_title ="Bienvenue dans Escape Room";
   title: any = 'Vous êtes bloqué pendant une heure';
   nbClassicRooms = 10;
   nbVirutelRooms = 2;

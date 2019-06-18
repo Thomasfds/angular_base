@@ -11,6 +11,7 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
 import { HomeComponent } from './pages/home/home.component';
 import { RoomsListComponent } from './pages/rooms-list/rooms-list.component';
 import { AboutComponent } from './pages/about/about.component';
+import { Error404Component } from './pages/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutComponent } from './pages/about/about.component';
     NewsletterComponent,
     HomeComponent,
     RoomsListComponent,
-    AboutComponent
+    AboutComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
