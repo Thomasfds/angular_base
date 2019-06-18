@@ -1,0 +1,14 @@
+<h2 class="mt-5">Prix</h2>
+
+<p>Nombre de personne : {{nombre_personne}}</p>
+
+<p>Prix par personne : {{prixPersonne()}}</p>
+
+<p>Prix total : {{pricetotal}}€</p>
+<p>Code promo: REDUC<br>
+  à l'input <input type="text" class="form-control" (input)="verifyPromo($event)"><br>
+  au keyup : <input type="text" class="form-control" (keyup)="keyUp()"><br>
+  au blur : <input type="text"  class="form-control"(blur)="blur()"><br>
+</p>
+<button [disabled]="nombre_personne == 6" (click)=ajout()>Ajouter une personne</button>
+<button [disabled]="nombre_personne == 0" (click)=reduit()>Enlever une personne</button>

@@ -1,0 +1,20 @@
+<h1 class="mt-5">
+ {{slide.title}}
+</h1>
+<!-- <img src="./assets/img/{{images}}.jpg" alt="{{images}}" title="{{images}}"> -->
+<img [src]="slide.images.src" [alt]="slide.images.alt" [title]="slide.images.title">
+
+<ul>
+  <li>{{nbClassicRooms}} Salles classiques</li>
+  <li>{{nbVirutelRooms}} salle de réalité virtuel</li>
+  <!-- Calcule avec les variables -->
+  <li>Soit {{nbClassicRooms + nbVirutelRooms}}  salles</li>
+  <li>Soit {{(nbClassicRooms + nbVirutelRooms) * 60}} minutes de folies</li>
+  <!-- /Calcule variables -->
+  <li>{{ lastli() }}</li>
+</ul>
+
+<button [disabled]='isDisabled' (click)="seeMore()">COUCOU</button>
+
+<!-- <a [href]="link">Go google</a>
+<input [value]="value"> -->

@@ -1,0 +1,23 @@
+<h1 class="mt-5">SURVEY</h1>
+<label>Quel est ton nom ?</label>
+<input type="text" id="pseudo" class="form-control mb-3" placeholder="Quel est ton nom ?" [(ngModel)]="survey.pseudo">
+<!-- 
+<input type="text" id="pseudo" class="form-control mb-3" placeholder="Quel est ton nom ?" (input)="pseudo = $event.target.value"
+[value]="pseudo">
+ -->
+<!-- 
+  <input type="text" id="pseudo" class="form-control mb-3" placeholder="Quel est ton nom ?" (input)="updatePseudo($event.target.value)"> -->
+
+<select id="category" class="form-control mb-5" [(ngModel)]="survey.category">
+  <option value="">--Choisir une catégorie</option>
+  <option value="Histoire">Histoire</option>
+  <option value="Futuriste">Futuriste</option>
+  <option value="Aventure">Aventure</option>
+</select>
+
+<p>{{survey | json}}</p>
+
+<div>
+  Merci d'avoir pris le temps de répondre {{survey.pseudo}}
+</div>
+<button class="btn btn-primary" (click)="validate()">Envoyer</button>
