@@ -1,24 +1,54 @@
-<div class="card mt-5" [ngClass]="{'virtual': room.isVirtual}" style="width: 18rem;">
-    <img [src]="room.imageUrl" class="card-img-top" alt="{{room.imageAlt}}">
-    <div class="card-body">
-      <h5 class="card-title">{{room.title}}</h5>
-      <span class="badge badge-primary mr-1">
-        de {{room.nbMin}} à {{room.nbMax}} joueurs
-      </span>
-      <span class="badge badge-info" [ngClass]="{'badge-info': room.difficulty == 1, 'badge-warning': room.difficulty == 2,'badge-danger': room.difficulty == 3}">
-        Difficulté : {{room.difficulty}} 
-      </span>
-      <span class="badge badge-success" *ngIf="room.isVirtual">
-          Salle virtuelle 
-      </span>
-      <span class="badge badge-danger" *ngIf="!room.isVirtual">
-          Salle non-virtuelle 
-      </span>
-      <p class="card-text" *ngIf="seeMore">{{room.description}}</p>
-      <button class="btn btn-primary btn-block" (click)="seeMore = !seeMore">
-        <span *ngIf="!seeMore">Afficher</span>
-        <span *ngIf="seeMore">Reduire</span>
-        
-      </button>
+<h1>Les salles</h1>
+<p>
+  Salle sélectionnée : {{RoomSelect?.title}}
+</p>
+
+<!-- Liste des salles -->
+<div class="album p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"  *ngFor="let wt of rooms">
+            <app-room [room]="wt" [text]="'txt'"></app-room>
+        </div>
     </div>
   </div>
+</div>
+<!-- /Liste des salles -->
+
+<!-- Résumé -->
+<h2>En résumé</h2>
+
+<table class="table text-white text-center">
+
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Description</th>
+        <th scope="col">Nbr joueurs</th>
+        <th scope="col">Difficulté</th>
+        <th scope="col">Virtuel</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let room of rooms; let i =index;">
+        <td>{{i + 1}}</td>
+        <td>{{room.title}}</td>
+        <td>{{room.description}}</td>
+        <td>de {{room.nbMin}} à {{room.nbMax}} joueurs</td>
+        <td>Difficulté : {{room.difficulty}}</td>
+        <td>
+            <span class="badge badge-success" *ngIf="room.isVirtual">
+                Salle virtuelle 
+            </span>
+            <span class="badge badge-danger" *ngIf="!room.isVirtual">
+                Salle non-virtuelle 
+            </span>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>  
+  <!-- /Résumé -->
