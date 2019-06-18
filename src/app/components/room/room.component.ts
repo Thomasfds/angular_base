@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-room',
@@ -7,13 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RoomComponent implements OnInit {
   @Input() room: any;
-  @Input() text: any;
-
+  @Output() selection = new EventEmitter;
   seeMore = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sel(room: any){
+    this.selection.emit(room);
   }
 
 }

@@ -90,7 +90,7 @@ export class RoomsListComponent implements OnInit {
     }
   ]
 
-  
+  RoomSelect: IRoom;
   seeMore = false;
   txt= "CAFARTE";
 
