@@ -1,0 +1,9 @@
+<h1 class="mt-5">
+  Newsletter
+</h1>
+
+<p>Inscrivez-vous</p>
+
+<input type="email" id="email" class="form-control" [(ngModel)]="email">
+<button class="btn btn-primary btn-block mb-5" [disabled]="email.length == 0" (click)="send()" >Envoyer</button>
+{{email}}

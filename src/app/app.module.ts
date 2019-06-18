@@ -7,13 +7,21 @@ import { PresentationComponent } from './components/presentation/presentation.co
 import { PriceComponent } from './components/price/price.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SurveyComponent } from './components/survey/survey.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { HomeComponent } from './pages/home/home.component';
+import { RoomsListComponent } from './pages/rooms-list/rooms-list.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PresentationComponent,
     PriceComponent,
-    SurveyComponent
+    SurveyComponent,
+    NewsletterComponent,
+    HomeComponent,
+    RoomsListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
