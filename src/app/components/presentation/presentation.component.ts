@@ -4,9 +4,9 @@ import { Component, OnInit } from '@angular/core';
 interface ISlide{
   title: string;
   images:{
-    src:string,
-    alt:string,
-    title:string,
+    src:string;
+    alt:string;
+    title:string;
   }
 }
 

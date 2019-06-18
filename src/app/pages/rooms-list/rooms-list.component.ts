@@ -1,12 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
+interface IRoom{
+  title: string;
+  imageUrl:string;
+  imageAlt:string;
+  description:string;
+  nbMin: number;
+  nbMax: number;
+  difficulty: number;
+  isVirtual: boolean;
+}
+
 @Component({
   selector: 'app-rooms-list',
   templateUrl: './rooms-list.component.html',
   styleUrls: ['./rooms-list.component.scss']
 })
 export class RoomsListComponent implements OnInit {
-  room = {
+  room: IRoom = {
     title: 'Pirate',
     description: `En temps que jeune mousse, vous devrez visiter le bateau du célèbre pirate Barbe Verte. Saurez-vous découvrir où
       il a caché le trésor découvert sur l'île Perdue et quitter le navire ? Mais dépêchez-vous les autres pirates vous suspectent
