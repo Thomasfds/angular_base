@@ -1,7 +1,24 @@
-<div class="card mt-5" style="width: 18rem;">
+<div class="card mt-5" [ngClass]="{'virtual': room.isVirtual}" style="width: 18rem;">
     <img [src]="room.imageUrl" class="card-img-top" alt="{{room.imageAlt}}">
     <div class="card-body">
       <h5 class="card-title">{{room.title}}</h5>
-      <p class="card-text">{{room.description}}</p>
+      <span class="badge badge-primary mr-1">
+        de {{room.nbMin}} à {{room.nbMax}} joueurs
+      </span>
+      <span class="badge badge-info" [ngClass]="{'badge-info': room.difficulty == 1, 'badge-warning': room.difficulty == 2,'badge-danger': room.difficulty == 3}">
+        Difficulté : {{room.difficulty}} 
+      </span>
+      <span class="badge badge-success" *ngIf="room.isVirtual">
+          Salle virtuelle 
+      </span>
+      <span class="badge badge-danger" *ngIf="!room.isVirtual">
+          Salle non-virtuelle 
+      </span>
+      <p class="card-text" *ngIf="seeMore">{{room.description}}</p>
+      <button class="btn btn-primary btn-block" (click)="seeMore = !seeMore">
+        <span *ngIf="!seeMore">Afficher</span>
+        <span *ngIf="seeMore">Reduire</span>
+        
+      </button>
     </div>
   </div>
