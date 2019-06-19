@@ -1,0 +1,12 @@
+<h1>Nos meilleurs salles</h1>
+<!-- Liste des salles -->
+<div class="album p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"  *ngFor="let x of rooms; let i = index">
+      <app-room [room]="x" *ngIf="i <= 1"></app-room>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /Liste des salles -->

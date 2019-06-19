@@ -15,6 +15,7 @@ import { Error404Component } from './pages/error404/error404.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RoomComponent } from './components/room/room.component';
 import { MoreLessComponent } from './components/more-less/more-less.component';
+import { BestRoomComponent } from './components/best-room/best-room.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MoreLessComponent } from './components/more-less/more-less.component';
     Error404Component,
     NavbarComponent,
     RoomComponent,
-    MoreLessComponent
+    MoreLessComponent,
+    BestRoomComponent
   ],
   imports: [
     BrowserModule,

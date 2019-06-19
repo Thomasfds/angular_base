@@ -10,5 +10,4 @@
   au keyup : <input type="text" class="form-control" (keyup)="keyUp()"><br>
   au blur : <input type="text"  class="form-control"(blur)="blur()"><br>
 </p>
-<button [disabled]="nombre_personne == 6" (click)=ajout()>Ajouter une personne</button>
-<button [disabled]="nombre_personne == 0" (click)=reduit()>Enlever une personne</button>
+<app-more-less [value]="nombre_personne" [min]="1" [max]="6" (valChange)="nombre_personne = $event"></app-more-less>
