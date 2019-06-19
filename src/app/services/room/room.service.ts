@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IRoom } from 'src/app/models/room';
+import { HttpClient } from '@angular/common/http';
 //PENSEZ A IMPORTER L'INTERFACE BORDEL
 
 @Injectable({
@@ -74,9 +75,14 @@ export class RoomService {
   ]
   //Fin de l'objet
 
-  constructor() { }
+  constructor(public http: HttpClient) { }
 
   getRooms(): IRoom[]{
     return this.rooms;
   }
+
+getRoomsFromApi(){
+return this.http.get('https://5cebab4177d47900143b8cd8.mockapi.io/api/v1/rooms/');
+}
+
 }

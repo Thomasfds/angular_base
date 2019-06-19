@@ -18,9 +18,6 @@ room: any;
 
 constructor(public route : ActivatedRoute, public roomService: RoomService, private http: HttpClient) { }
 
-getFilms() {
-  return this.http.get('https://libreplay.fr/api/films.php');
-}
 
   ngOnInit(): void {
     this.player = new Plyr('#plyrID', { captions: { active: true } }); // Ne recopie pas ce code

@@ -21,7 +21,10 @@ export class RoomsListComponent implements OnInit {
   constructor(public roomService: RoomService) { }
 
   ngOnInit() {
-    this.rooms = this.roomService.getRooms();
+    // this.rooms = this.roomService.getRooms();
+    this.roomService.getRoomsFromApi().subscribe(
+      (roomsFromApi: any) => this.rooms = roomsFromApi
+      );
   }
 
 }// Fin class

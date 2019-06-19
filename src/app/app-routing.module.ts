@@ -5,6 +5,8 @@ import {RoomsListComponent} from './pages/rooms-list/rooms-list.component';
 import {AboutComponent} from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { RoomDetailComponent } from './pages/room-detail/room-detail.component';
+import { ContactComponent } from './pages/contact/contact.component';
+
 //PAS D'ESPACE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 const routes: Routes = [
@@ -12,6 +14,7 @@ const routes: Routes = [
   {path: 'rooms-list', component: RoomsListComponent},
   {path: 'about', component: AboutComponent},
   {path: 'room-detail/:id', component: RoomDetailComponent},
+  {path: 'contact', component: ContactComponent},
 
   {path: '**', component: Error404Component}
 

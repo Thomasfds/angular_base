@@ -18,6 +18,7 @@ import { MoreLessComponent } from './components/more-less/more-less.component';
 import { BestRoomComponent } from './components/best-room/best-room.component';
 import { RoomDetailComponent } from './pages/room-detail/room-detail.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     RoomComponent,
     MoreLessComponent,
     BestRoomComponent,
-    RoomDetailComponent
+    RoomDetailComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

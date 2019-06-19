@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Contact</h1>
+    <form #contactForm="ngForm">
+    <div class="form-group">
+      <label for="pseudo">Pseudo</label>
+      <input class="form-control" id="pseudo" type="text" name="pseudo" autocomplete="off" [(ngModel)] ="contactData.pseudo" #pseudoInput="ngModel" required minlength="6">
+    </div>
+
+<div class="alert alert-danger" *ngIf="pseudoInput.touched && pseudoInput.error?.minlength">
+    le pseudo est trop court
+</div>
+
+<div class="alert alert-danger" *ngIf="pseudoInput.touched && !pseudoInput.valid">
+  le pseudo est incorrect
+</div>
+<p>
+  <button [disabled]="contactForm.invalid">COUCOU</button>
+</p>
+
+</form>
+
+  {{pseudoInput.errors | json}}
+
+  <p>
+    touched : {{ pseudoInput.touched}}, untouched : {{ pseudoInput.untouched }}<br>
+    dirty : {{ pseudoInput.dirty }}, pristine : {{ pseudoInput.pristine }}<br>
+    valid : {{ pseudoInput.valid }}, invalid : {{ pseudoInput.invalid }}
+  </p>
+</div>
