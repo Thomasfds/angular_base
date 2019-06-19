@@ -17,7 +17,6 @@ export class BestRoomComponent implements OnInit {
 
   ngOnInit() {
     this.rooms = this.roomService.getRooms();
-
   }
 
 }

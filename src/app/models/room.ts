@@ -1,4 +1,5 @@
 export interface IRoom {
+    id:number;
     title: string;
     imageUrl:string;
     imageAlt:string;

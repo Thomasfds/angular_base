@@ -20,7 +20,7 @@
         <span *ngIf="seeMore">Reduire</span>
       </button>
       <button  class="btn btn-primary btn-block mt-1" (click)="sel(room)" *ngIf="displaySelection">Selectionner</button>
-      <a class="btn btn-primary btn-block mt-1" routerLink="/room-detail">Aller sur la page</a>
+      <a class="btn btn-primary btn-block mt-1" [routerLink]="['/room-detail/', room.id]">Aller sur la page</a>
     </div>
   </div>
 
