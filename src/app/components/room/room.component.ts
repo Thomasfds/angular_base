@@ -7,8 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./room.component.scss']
 })
 export class RoomComponent implements OnInit {
-  @Input() room: any;
+  @Input() room: string;
   @Output() selection = new EventEmitter;
+  @Input() difficultyMin: number;
+
   seeMore = false;
 
   constructor() { }

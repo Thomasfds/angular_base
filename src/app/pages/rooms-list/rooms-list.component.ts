@@ -1,15 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IRoom } from 'src/app/models/room';
+//PENSEZ A IMPORTER L'INTERFACE BORDEL
 
-interface IRoom{
-  title: string;
-  imageUrl:string;
-  imageAlt:string;
-  description?:string;
-  nbMin: number;
-  nbMax: number;
-  difficulty: number;
-  isVirtual: boolean;
-}
 
 @Component({
   selector: 'app-rooms-list',
@@ -93,9 +85,8 @@ export class RoomsListComponent implements OnInit {
   RoomSelect: IRoom;
   seeMore = false;
   txt= "CAFARTE";
-
+  difficultyMin = 2;
   constructor() { }
-
   ngOnInit() {
   }
 

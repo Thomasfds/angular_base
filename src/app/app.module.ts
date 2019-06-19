@@ -14,6 +14,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RoomComponent } from './components/room/room.component';
+import { MoreLessComponent } from './components/more-less/more-less.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RoomComponent } from './components/room/room.component';
     AboutComponent,
     Error404Component,
     NavbarComponent,
-    RoomComponent
+    RoomComponent,
+    MoreLessComponent
   ],
   imports: [
     BrowserModule,
