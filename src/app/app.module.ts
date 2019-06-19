@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RoomComponent } from './components/room/room.component';
 import { MoreLessComponent } from './components/more-less/more-less.component';
 import { BestRoomComponent } from './components/best-room/best-room.component';
+import { RoomDetailComponent } from './pages/room-detail/room-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BestRoomComponent } from './components/best-room/best-room.component';
     NavbarComponent,
     RoomComponent,
     MoreLessComponent,
-    BestRoomComponent
+    BestRoomComponent,
+    RoomDetailComponent
   ],
   imports: [
     BrowserModule,

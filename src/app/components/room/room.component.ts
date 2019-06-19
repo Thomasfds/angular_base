@@ -10,6 +10,7 @@ export class RoomComponent implements OnInit {
   @Input() room: string;
   @Output() selection = new EventEmitter;
   @Input() difficultyMin: number;
+  @Input() displaySelection: boolean = true;
 
   seeMore = false;
 

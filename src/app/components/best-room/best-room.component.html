@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4"  *ngFor="let x of rooms; let i = index">
-      <app-room [room]="x" *ngIf="i <= 1"></app-room>
+      <app-room [room]="x" *ngIf="i <= 1" [displaySelection]="false"></app-room>
     </div>
   </div>
 </div>
